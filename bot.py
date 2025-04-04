@@ -33,15 +33,10 @@ async def on_message(message):
             picture = discord.File(f)
             await message.channel.send(f"🗺️ Random Map: **{map_name}**", file=picture)
 
-    if message.content.lower() == "!lowf":
-        with open("lowf.jpg", "rb") as f:
-            file = discord.File(f)
-            await message.channel.send("lowf is a retard", file=file)
-
-    if message.content.lower() == "!dash":
-        with open("dash.jpg", "rb") as f:
-            file = discord.File(f)
-            await message.channel.send("6'8 280 and rich", file=file)
+    if message.content.lower() == "!coinflip":
+    result = random.choice(["Heads", "Tails"])
+    await message.channel.send(f"🪙 The coin landed on **{result}**!")
+    
 
 # ✅ Final line to start bot
 client.run(os.getenv("TOKEN"))
