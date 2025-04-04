@@ -34,10 +34,8 @@ async def on_message(message):
             await message.channel.send(f"🗺️ Random Map: **{map_name}**", file=picture)
 
     if message.content.lower() == "!coinflip":
-    result = random.choice(["Heads", "Tails"])
-    await message.channel.send(f"🪙 The coin landed on **{result}**!")
-    
+        result = random.choice(["Heads", "Tails"])
+        await message.channel.send(f"🪙 The coin landed on **{result}**!")
 
 # ✅ Final line to start bot
 client.run(os.getenv("TOKEN"))
-
