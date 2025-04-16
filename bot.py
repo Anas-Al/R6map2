@@ -154,7 +154,7 @@ class CaptainVoteButton(discord.ui.Button):
 
 # Additional logic for pick phase, voice channels, winner voting, MMR, cancel voting, and cleanup
 # will continue in next code block (file too large for one block)async def start_pick_phase(channel):
-    async def start_pick_phase(channel):
+async def start_pick_phase(channel):
     global PICKS, captains
     PICKS = [[], []]
     sorted_votes = sorted(votes.items(), key=lambda x: x[1], reverse=True)
